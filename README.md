@@ -56,9 +56,9 @@ streamlit run app.py
 - **`node_retrieval.py`:** Retrieves relevant documents from the knowledge base based on user queries.
 - **`retriever_setup.py`:** Configures the ensemble retriever for document retrieval using FAISS and BM25.
 - **`system_prompts`:** A folder containing three essential prompts used in the chatbot workflow:
-- `query_classification.txt:` A prompt used by the QueryClassifier to classify the user's query as either 'knowledge' or 'discussion'.
-- `knowledge.txt:` A prompt used by the Generation node to generate answers to knowledge-based queries, utilizing relevant physics documents.
-- `discussion.txt:` A prompt used by the Generation node to generate answers for discussion-based queries, utilizing chat history.
+  - `query_classification.txt:` A prompt used by the QueryClassifier to classify the user's query as either 'knowledge' or 'discussion'.
+  - `knowledge.txt:` A prompt used by the Generation node to generate answers to knowledge-based queries, utilizing relevant physics documents.
+  - `discussion.txt:` A prompt used by the Generation node to generate answers for discussion-based queries, utilizing chat history.
 
 ## Usage
 
