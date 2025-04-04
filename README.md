@@ -1,7 +1,3 @@
-# smol-course
-
-
-
 # AI Chatbot for ExtraMarks
 
 This repository contains the code for an AI-powered chatbot designed to assist students with Class 12 Physics queries. The chatbot leverages advanced RAG pipeline to generate answers to physics-related questions. It is built using Python, LangChain, LangGraph, Google Gemini API, and other relevant tools.
@@ -34,7 +30,10 @@ pip install -r requirements.txt
 GOOGLE_API_KEY=your_google_api_key
 HUGGINGFACEHUB_API_TOKEN=your_huggingface_api_token
 
-3. Run the application:
+
+**Note:** Replace `your_google_api_key` with your actual Google API key, and `your_huggingface_api_token` with your actual Hugging Face API token.
+
+4. Run the application:
 streamlit run app.py
 
 
