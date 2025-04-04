@@ -74,3 +74,5 @@ streamlit run app.py
 4. **Document Retrieval:** For knowledge queries, relevant documents are retrieved from the physics Q&A knowledge base.
 5. **Answer Generation:** The final answer is generated based on the retrieved documents or chat history.
 6. **Response Display:** The answer is displayed to the user, and the conversation is logged.
+7. 
+
