@@ -31,8 +31,8 @@ pip install -r requirements.txt
 3. **Set up environment variables:**
 Create a `.env` file in the root directory and add the following:
 ```bash
-GOOGLE_API_KEY=your_google_api_key
-HUGGINGFACEHUB_API_TOKEN=your_huggingface_api_token
+GOOGLE_API_KEY="your_google_api_key"
+HUGGINGFACEHUB_API_TOKEN="your_huggingface_api_token"
 ```
 
 **Note:** Replace `your_google_api_key` with your actual Google API key, and `your_huggingface_api_token` with your actual Hugging Face API token.
