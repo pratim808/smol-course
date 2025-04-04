@@ -40,7 +40,7 @@ HUGGINGFACEHUB_API_TOKEN=your_huggingface_api_token
 3. **Run the application:**
 ```bash
 streamlit run app.py
-
+```
 
 
 ## Components
