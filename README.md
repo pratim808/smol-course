@@ -35,7 +35,7 @@ GOOGLE_API_KEY="your_google_api_key"
 HUGGINGFACEHUB_API_TOKEN="your_huggingface_api_token"
 ```
 
-**Note:** Replace `your_google_api_key` with your actual Google API key, and `your_huggingface_api_token` with your actual Hugging Face API token.
+**Note:** Replace `your_google_api_key` with your actual Google API key, and `your_huggingface_api_token` with your actual Hugging Face READ API token.
 
 3. **Run the application:**
 ```bash
