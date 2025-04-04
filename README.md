@@ -24,16 +24,16 @@ Ensure the following dependencies are installed:
 ### Setup
 Follow these steps to set up the application:
 
-1. **Install required dependencies:**  
-   Run the following command to install the necessary Python packages:
-   
-1. Install required dependencies:
+1. **Install dependencies:**
+```bash
 pip install -r requirements.txt
-
-2. Set up environment variables: Create a `.env` file in the root directory and add the following keys:
+```
+3. **Set up environment variables:**
+Create a `.env` file in the root directory and add the following:
+```bash
 GOOGLE_API_KEY=your_google_api_key
 HUGGINGFACEHUB_API_TOKEN=your_huggingface_api_token
-
+```
 
 **Note:** Replace `your_google_api_key` with your actual Google API key, and `your_huggingface_api_token` with your actual Hugging Face API token.
 
