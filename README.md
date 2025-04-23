@@ -335,15 +335,15 @@ After installation, you can access Attu at http://localhost:8000.
 ### 6. Start the API Server
 
 ```bash
-uvicorn api:app --reload
+uvicorn api:app --reload --port 8001
 ```
 
-The API server will be available at http://localhost:8000.
+The API server will be available at http://localhost:8001.
 
 ## Usage
 
 When you start the API server using `uvicorn api:app --reload`, a chatbot UI will be accessible at:
-uvicorn api:app --reload --port 8001
+
 ```
 http://localhost:8000
 ```
