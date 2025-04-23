@@ -33,37 +33,48 @@ Milvus provides a Docker Compose configuration file for easy installation:
 # Download the configuration file
 wget https://github.com/milvus-io/milvus/releases/download/v2.5.10/milvus-standalone-docker-compose.yml -O docker-compose.yml
 
-# Start Milvus
+4. Set Up Docker Containers
+Install Milvus
+To install Milvus, follow these steps:
+
+Start Milvus using Docker Compose:
+
 sudo docker compose up -d
 
-Note: 
+Note:
 
-If you failed to run the above command, please check whether your system has Docker Compose V1 installed. If this is the case, you are advised to migrate to Docker Compose V2.
+If you fail to run the above command, check whether your system has Docker Compose V1 installed. If so, you are advised to migrate to Docker Compose V2.
 If you encounter any issues pulling the image, contact community@zilliz.com with details about the problem for support.
 
-After starting up Milvus:
+After starting Milvus:
 
 Containers named milvus-standalone, milvus-minio, and milvus-etcd are up.
 The milvus-etcd container does not expose any ports to the host and maps its data to volumes/etcd in the current folder.
 The milvus-minio container serves ports 9090 and 9091 locally with the default authentication credentials and maps its data to volumes/minio in the current folder.
-The milvus-standalone container serves ports 19530 locally with the default settings and maps its data to volumes/milvus in the current folder.
+The milvus-standalone container serves port 19530 locally with the default settings and maps its data to volumes/milvus in the current folder.
 
-You can check if the containers are up and running using:
+To check if the containers are up and running, use:
 sudo docker-compose ps
 
-You can also access Milvus WebUI at http://127.0.0.1:9091/webui/ to learn more about your Milvus instance.
+You can also access the Milvus WebUI at http://127.0.0.1:9091/webui/ to learn more about your Milvus instance.
 Install Phoenix
 There are two ways to install Phoenix:
 Option 1: Simple Docker Container
+
 Pull the Phoenix image:
+
 docker pull arizephoenix/phoenix
 
+
 Run the Phoenix container:
+
 docker run -p 6006:6006 -p 4317:4317 -i -t arizephoenix/phoenix:latest
 
 After installation, you can access Phoenix at http://0.0.0.0:6006.
 Option 2: Using Docker Compose (Recommended for Production)
-Create a phoenix-compose.yaml file:
+
+Create a phoenix-compose.yaml file with the following content:
+
 services:
   phoenix:
     image: arizephoenix/phoenix:latest
@@ -97,7 +108,9 @@ services:
       backend:
         condition: service_healthy
 
+
 Start Phoenix and associated services:
+
 docker compose -f phoenix-compose.yaml up -d
 
 This ensures you always have a running Phoenix instance alongside your application.
@@ -125,6 +138,8 @@ After starting the container, you can access Attu at http://localhost:8000 (or h
 Subsequent launches
 For subsequent launches, you can start the container with:
 docker start attu
+
+
 
 6. Start the API Server
 uvicorn api:app --reload
