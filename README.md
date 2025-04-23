@@ -345,17 +345,22 @@ Configuration options can be modified in the `config.py` file.
 
 ## Stopping and Deleting Containers
 When you're done, you can stop and delete the containers:
-bash# Stop Milvus
-sudo docker compose down
-
-# Stop Phoenix (if using docker-compose)
-docker compose -f phoenix-compose.yaml down
-# OR stop Phoenix (if using single container)
-docker stop $(docker ps -q --filter "ancestor=arizephoenix/phoenix")
-
-# Delete service data
-sudo rm -rf volumes
 ```
+Stop Milvus
+sudo docker compose down
+```
+
+## Stop Phoenix (if using docker-compose)
+```
+docker compose -f phoenix-compose.yaml down
+```
+## OR stop Phoenix (if using single container)
+```
+docker stop $(docker ps -q --filter "ancestor=arizephoenix/phoenix")
+```
+## Delete service data
+```
+sudo rm -rf volumes
 
 ## License
 
