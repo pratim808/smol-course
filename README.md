@@ -329,8 +329,15 @@ This ensures you always have a running Phoenix instance alongside your applicati
 ```bash
 docker run --name attu --network milvus -p 8000:3000 -e MILVUS_URL=milvus-standalone:19530 zilliz/attu:v2.3.6
 ```
+For subsequent launches (after system restart or if the container has stopped):
+
+```bash
 docker start attu
+```
+
+This will restart the Attu container without creating a new one.
 After installation, you can access Attu at http://localhost:8000.
+
 
 ### 6. Start the API Server
 
