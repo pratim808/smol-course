@@ -127,12 +127,14 @@ For subsequent launches, you can start the container with:
 docker start attu
 
 6. Start the API Server
-uvicorn api:app --reload --port 8001
+uvicorn api:app --reload
 
-The API server will be available at http://localhost:8001.
+The API server will be available at http://localhost:8000.
 Usage
 When you start the API server using uvicorn api:app --reload, a chatbot UI will be accessible at:
+uvicorn api:app --reload --port 8001
 
+http://localhost:8000
 You can interact with the RAG pipeline directly through this user interface by entering your queries.
 Configuration
 Configuration options can be modified in the config.py file.
@@ -161,6 +163,7 @@ sudo rm -rf volumes
 Note: To stop the Attu container, use docker stop attu. If you want to remove the container entirely, use docker rm attu after stopping it.
 License
 [Your license information here]
+
 
 
 
